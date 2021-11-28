@@ -1,0 +1,66 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- bot_challenge
+- mood_great
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- thanks
+- out_of_scope
+- help
+- request_country
+- inform_country_only
+- request_capital
+- request_population
+entities:
+- country
+slots:
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
+responses:
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_greet:
+  - text: Hey! How are you?
+  utter_thanks:
+  - text: You are welcome anytime.
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Awesome!, I am here for you.
+  utter_goodbye:
+  - text: Bye, Have a good day.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_help:
+  - text: "I can help you find the capital and population of any country around the world.
+          \nyou can ask me things like: 
+          \n- What do you know about Greece?
+          \n- what is the population of Australia?
+          \n- Tell me the capital of Japan."
+  utter_continue:
+  - text: so tell me, what country do you want search for?
+  utter_ask_country:
+  - text: I can search for capital and population for any country around the world. Just ask for it.
+actions:
+- action_display_countries
+- action_inform_capital_pop
+- validate_country_form
+forms:
+  country_form:
+    required_slots:
+    - country

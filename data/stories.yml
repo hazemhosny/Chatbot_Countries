@@ -1,0 +1,71 @@
+version: "3.0"
+
+stories:
+- story: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: give help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: Thanks the bot
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_help
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_country
+  - action: action_display_countries
+  - slot_was_set:
+    - country: null
+  - action: country_form
+  - active_loop: country_form
+  - slot_was_set:
+    - requested_slot: country
+  - slot_was_set:
+    - country: Greece
+  - slot_was_set:
+    - country: Greece
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_inform_capital_pop
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_help
+  - intent: mood_great
+  - action: utter_happy

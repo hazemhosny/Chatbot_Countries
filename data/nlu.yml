@@ -1,0 +1,197 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - whats up
+    - heeeeeeey
+    - bonjour
+    - well hello there
+    - yo yo yo
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: thanks
+  examples: |
+    - thanks for help
+    - wow you are good
+    - thanks for help
+    - nice thanks
+    - you are a smart bot
+    - thanks
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - how you doin?
+    - great thanks for asking
+    - Cómo estás
+    - cool
+    - that seems interesting
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I am not doing great
+    - not fine
+    - I am not good
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you an ia machine?
+    - how am I talking to?
+    - are you a robot?
+    - what kind of bot are you?
+    - are you an artifical intelligence bot?
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - how old are you?
+    - add two plus two
+    - Hdjejene
+    - asd
+    - title
+    - how about the forecast
+    - foolish
+    - joke
+    - Can I get a hamburger?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you make sandwiches?
+    - Can you please send me an uber
+- intent: help
+  examples: |
+    - how can you help me?
+    - what are you made for?
+    - are you sure you can help?
+    - help me.
+    - I am a little confused here.
+    - what can you do for me?
+    - anything else
+    - are there any other options?
+    - come back
+    - help please
+    - hep
+- intent: request_country
+  examples: |
+    - can you tell me the capital of any country?
+    - help me with countries.
+    - list me the countries around the world.
+    - what countries are there?
+    - display countries available.
+    - show me countries available.
+- intent: request_capital
+  examples: |
+    - tell me the capital of [USA](country)?
+    - what is the capital of [Greece](country)?
+    - check the capital of [Finland](country).
+    - what about the capital of [Sweden](country)?
+    - do you know the capital of [Canada](country)?
+- intent: request_population
+  examples: |
+    - what is the population of [Japan](country)?
+    - can you help with the population of [Canada](country)?
+    - what about the population of [Saudi Arabia](country)?
+    - tell me the population of [Greece](country).
+    - I am looking for the [USA](country) population.
+    - help me with the [Russia](country) population.
+- intent: inform_country_only
+  examples: |
+    - what about [Greece](country)?
+    - I would like to know more about [USA](country).
+    - Can you help with [Russia](country)?
+    - I'd love to do search about [Japan](country).
+    - That seems interesting, look for [Sweden](country).
+    - search about [Egypt](country).
+    - tell me about [Australia](country).
+    - tell me about [Canada](country).
+- lookup: country
+  examples: |
+    - USA
+    - Greece
+    - Sweden
+    - Australia
+    - Finland
+    - Japan
+    - Russia
+    - India
+    - Egypt
+    - Saudi Arabia
+    - Canada
