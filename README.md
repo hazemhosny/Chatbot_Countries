@@ -24,7 +24,7 @@ after installation:
 3. Open the first terminal, and run:
     - -> rasa train
 4. Open new terminal with rasa virtual env to run actions server, make sure you are in the project directory, and run: 
-    - -> rasa actions run
+    - -> rasa run actions
 5. Get back to the first terminal, and run:
     - -> rasa shell
 6. From here you are good to go with the chatbot. **Have fun!**
