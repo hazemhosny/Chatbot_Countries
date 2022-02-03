@@ -9,11 +9,12 @@ you can ask things like:
 
 It can Handle different stories, variations, and case sensitive words.
 example:
-> **Input:** Tell me the capital of USA.
->> **Bot:** Washington, D.C. is the capital of USA. 
->
-> **Input:** what about its population?
->> **Bot:** There is 32.82 crores in USA.
+<pre>
+<b>Input:</b> Tell me the capital of USA.
+<b>Bot:</b> Washington, D.C. is the capital of USA.
+<b>Input:</b> what about its population?
+<b>Bot:</b> There is 32.82 crores in USA.
+</pre>
 ## Run chatbot
 To run chatbot on your system you need to install rasa 3.0 on your virtual environment (anaconda)
 following this link to install rasa on your local drive: [youtube](https://www.youtube.com/watch?v=GlR60CvTh8A) or [Rasa documentation](https://rasa.com/docs/rasa/installation)
